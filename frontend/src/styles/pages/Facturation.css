@@ -1,0 +1,277 @@
+/* Styles généraux de la page */
+.billing-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+}
+
+/* En-tête de la page */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.05em;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.manage-payment-btn {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.manage-payment-btn:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+/* Bloc de résumé financier */
+.stats-summary-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-left: 5px solid;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:nth-child(1) { border-color: #ef4444; } /* Rouge pour le solde dû */
+.stat-card:nth-child(2) { border-color: #10b981; } /* Vert pour le total payé */
+
+.stat-icon-wrapper {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon-wrapper.due-icon {
+  color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.stat-icon-wrapper.paid-icon {
+  color: #10b981;
+  background-color: #f0fdf4;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 0.25rem;
+}
+
+/* Tableau des factures */
+.table-section {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.invoices-table-container {
+  overflow-x: auto;
+}
+
+.invoices-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.invoices-table th,
+.invoices-table td {
+  padding: 1.25rem;
+  border-bottom: 1px solid #e5e7eb;
+  min-width: 100px; /* Ensure columns don't get too narrow */
+}
+
+.invoices-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+/* Adjust column widths for better spacing with the new column */
+.invoices-table th:nth-child(1),
+.invoices-table td:nth-child(1) { width: 15%; } /* N° de Facture */
+.invoices-table th:nth-child(2),
+.invoices-table td:nth-child(2) { width: 25%; } /* Campagne */
+.invoices-table th:nth-child(3),
+.invoices-table td:nth-child(3) { width: 15%; } /* Date d'émission */
+.invoices-table th:nth-child(4),
+.invoices-table td:nth-child(4) { width: 15%; } /* Montant */
+.invoices-table th:nth-child(5),
+.invoices-table td:nth-child(5) { width: 15%; } /* Montant à payer */
+.invoices-table th:nth-child(6),
+.invoices-table td:nth-child(6) { width: 15%; } /* Statut */
+.invoices-table th:nth-child(7),
+.invoices-table td:nth-child(7) { width: 15%; } /* Actions */
+
+.invoices-table tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Badges de statut */
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-paid {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-overdue {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-cancelled {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+/* Boutons d'action */
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.action-btn {
+  background-color: #f9fafb;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn.pay-btn {
+  background-color: #10b981;
+  color: #fff;
+  border-color: #059669;
+}
+
+.action-btn.pay-btn:hover {
+  background-color: #059669;
+}
+
+/* Message "Aucune facture" */
+.no-invoices-section {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.no-invoices-icon {
+  font-size: 5rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.no-invoices-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.no-invoices-text {
+  font-size: 1rem;
+  color: #6b7280;
+}

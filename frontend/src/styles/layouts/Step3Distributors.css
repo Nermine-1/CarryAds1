@@ -1,0 +1,95 @@
+.form-step {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.distributors-container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.distributors-list-panel {
+  flex: 1;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background-color: #fff;
+}
+
+.search-icon {
+  color: #666;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.distributors-list {
+  list-style: none;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.distributor-item {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.distributor-item:hover {
+  background-color: #f0f0f0;
+}
+
+.distributor-item.selected {
+  background-color: #e0f7fa;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.distributors-map {
+  flex: 2;
+  height: 500px; /* Increased for better visibility */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.map-container {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* Ensure map canvas is visible */
+.maptiler-sdk-container {
+  height: 100% !important;
+  width: 100% !important;
+}

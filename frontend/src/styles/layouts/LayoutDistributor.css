@@ -1,0 +1,13 @@
+/* src/styles/layouts/LayoutAnnonceur.css */
+
+.layout-Distributor {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}

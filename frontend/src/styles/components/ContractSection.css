@@ -1,0 +1,118 @@
+/* Styles pour la section des contrats */
+.contracts-section {
+    margin-top: 3rem; /* Espacement avec le tableau des factures */
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+
+.contracts-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.contracts-table th,
+.contracts-table td {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.contracts-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+.contracts-table tr:hover {
+    background-color: #f3f4f6;
+}
+
+/* Badges de statut des contrats */
+.status-signed {
+    background-color: #d1fae5; /* Vert clair */
+    color: #065f46; /* Vert foncé */
+}
+
+.status-pending-signature {
+    background-color: #fef3c7; /* Jaune clair */
+    color: #92400e; /* Orange foncé */
+}
+
+.status-cancelled-contract {
+    background-color: #e5e7eb; /* Gris clair */
+    color: #4b5563; /* Gris foncé */
+}
+
+/* Bouton Signer (style spécifique) */
+.action-btn.sign-btn {
+    background-color: #008080; /* Couleur principale */
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem; /* Taille fixe pour l'icône */
+    height: 2.2rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.action-btn.sign-btn:hover {
+    background-color: #006666; /* Couleur plus foncée au survol */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Message "Aucun contrat" */
+.no-contracts-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #f9fafb;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem; /* Espacement si pas de tableau au-dessus */
+}
+
+.no-contracts-icon {
+    font-size: 5rem;
+    color: #d1d5db; /* Gris très clair */
+    margin-bottom: 1rem;
+}
+
+.no-contracts-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.no-contracts-text {
+    font-size: 1rem;
+    color: #6b7280;
+}
+.status-badge .status-icon {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.status-signed {
+    color: #065f46;
+    background-color: #d1fae5;
+}
+.status-signed .status-icon {
+    color: #065f46;
+}
+
+/* Styles pour l'icône de statut annulé */
+.status-cancelled-contract {
+    color: #4b5563;
+    background-color: #e5e7eb;
+}
+.status-cancelled-contract .status-icon {
+    color: #9ca3af; /* Couleur de l'icône annulée */
+}

@@ -1,0 +1,313 @@
+/* Fichier: src/styles/pages/CreerCampagne.css */
+
+.creer-campagne-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fbfd; /* Couleur de fond légère */
+  min-height: calc(100vh - 4rem);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pour pousser les boutons en bas */
+}
+
+.creer-campagne-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.progress-bar-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.progress-bar-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #e0e0e0;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  text-align: center;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.step-label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.progress-step.active .step-number {
+  background-color: #008080; /* Couleur principale */
+}
+
+.progress-step.completed .step-number {
+  background-color: #27ae60; /* Vert pour complété */
+}
+
+.progress-step.active .step-label,
+.progress-step.completed .step-label {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.form-content {
+  flex-grow: 1; /* Permet au contenu du formulaire de prendre l'espace disponible */
+  padding: 1rem 0;
+}
+
+.form-step {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.6rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Assure que le padding n'augmente pas la largeur */
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #008080;
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group-row .form-group {
+  flex: 1;
+  margin-bottom: 0; /* Supprime la marge du bas pour les groupes dans une ligne */
+}
+
+/* Styles pour les radios "Besoin d'un designer" */
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.radio-group input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: #008080;
+}
+
+.radio-group input[type="radio"]:checked::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #008080;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.nav-button {
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button.prev {
+  background-color: #ecf0f1;
+  color: #34495e;
+  border: 1px solid #bdc3c7;
+}
+
+.nav-button.prev:hover:not(:disabled) {
+  background-color: #dcdcdc;
+  transform: translateY(-2px);
+}
+
+.nav-button.next, .nav-button.submit {
+  background-color: #008080;
+  color: #fff;
+  border: 1px solid #008080;
+}
+
+.nav-button.next:hover:not(:disabled), .nav-button.submit:hover:not(:disabled) {
+  background-color: #006666;
+  transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Message de succès */
+.success-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #e8f5e9; /* Vert clair */
+  border: 1px solid #a5d6a7; /* Bordure verte */
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.success-title {
+  font-size: 2rem;
+  color: #388e3c; /* Vert foncé */
+  margin-bottom: 1rem;
+}
+
+.success-text {
+  font-size: 1.1rem;
+  color: #4CAF50; /* Vert moyen */
+  margin-bottom: 2rem;
+}
+
+.success-message .nav-button {
+  background-color: #008080;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.success-message .nav-button:hover {
+  background-color: #006666;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Message d'erreur */
+.error-message {
+  color: #d32f2f; /* Rouge foncé */
+  background-color: #ffebee; /* Rouge très clair */
+  border: 1px solid #ef9a9a; /* Bordure rouge */
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
