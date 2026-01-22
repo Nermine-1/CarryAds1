@@ -582,18 +582,18 @@ exports.getStats = async (req, res) => {
 
         const [statsRows] = await pool.execute(statsQuery, [distributorId]);
 
-       const stats = [
-    { title: 'Bags to Distribute', value: statsRows[0].totalImpressions.toLocaleString(), icon: '👁️' },
-    { title: 'Bags Distributed', value: statsRows[0].totalDistributed.toLocaleString(), icon: '🛍️' },
-    { title: 'Active Campaigns', value: statsRows[0].activeCampaigns.toString(), icon: '📢' },
-    { title: 'Estimated Revenue', value: `DT${parseFloat(statsRows[0].estimatedRevenue).toFixed(2)}`, icon: '💰' },
-];
+        const stats = [
+            { title: 'Bags to Distribute', value: statsRows[0].totalImpressions.toLocaleString(), icon: '👁️' },
+            { title: 'Bags Distributed', value: statsRows[0].totalDistributed.toLocaleString(), icon: '🛍️' },
+            { title: 'Active Campaigns', value: statsRows[0].activeCampaigns.toString(), icon: '📢' },
+            { title: 'Estimated Revenue', value: `DT${parseFloat(statsRows[0].estimatedRevenue).toFixed(2)}`, icon: '💰' },
+        ];
 
-res.status(200).json(stats);
-} catch (error) {
-    console.error("Error fetching distributor stats:", error);
-    res.status(500).json({ message: "Error fetching statistics.", details: error.message });
-};
+        res.status(200).json(stats);
+    } catch (error) {
+        console.error("Error fetching distributor stats:", error);
+        res.status(500).json({ message: "Error fetching statistics.", details: error.message });
+    }
 };
 exports.getProfile = async (req, res) => {
     try {
